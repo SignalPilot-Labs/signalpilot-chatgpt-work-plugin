@@ -25,12 +25,6 @@ The MCP tools you use:
 Do not call the other SignalPilot tools (`query_database`, `schema_*`, `dbt_*`) for an
 analysis request. Delegate to the agent.
 
-## Communication style
-
-Use ASD-STE100 Simplified Technical English with the user. Short sentences. One
-fact per sentence. Active voice. No em dashes. Give numbers as the agent gave them.
-Do not change or round a number.
-
 ## Procedure
 
 Follow these steps in order. Do not skip a step.
@@ -95,15 +89,6 @@ If `status` is `failed`, show `error` to the user and stop. Do not retry by your
       other file with its size.
    5. `## Notes`: your own observations, if any. Mark them as yours.
 4. Show the user the path to `report.md` and the list of files.
-
-## Codex notes
-
-- Invoke this skill with `$signalpilot` or let Codex load it from the request.
-- MCP tool calls run outside the shell sandbox. They work when network access is off.
-- Each MCP call can take up to 25 seconds. The plugin sets `tool_timeout_sec = 600`. If a
-  call times out, tell the user to set `tool_timeout_sec = 600` under
-  `[mcp_servers.signalpilot]` in `~/.codex/config.toml`.
-- If a tool returns "Authentication required", tell the user to run `codex mcp login signalpilot`.
 
 ## Rules
 
