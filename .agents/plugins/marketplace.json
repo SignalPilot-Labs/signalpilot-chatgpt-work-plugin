@@ -1,0 +1,20 @@
+{
+  "name": "signalpilot-agent",
+  "interface": {
+    "displayName": "SignalPilot Agent"
+  },
+  "plugins": [
+    {
+      "name": "signalpilot-agent",
+      "source": {
+        "source": "local",
+        "path": "./plugins/signalpilot-agent"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Data"
+    }
+  ]
+}

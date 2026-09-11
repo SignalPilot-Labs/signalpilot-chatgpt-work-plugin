@@ -1,0 +1,30 @@
+{
+  "name": "signalpilot-agent",
+  "version": "0.1.0",
+  "description": "Delegate data analysis to a SignalPilot agent from Codex: launch, watch, collect the report and artifacts, write a local report. Signs in with your SignalPilot account over OAuth.",
+  "author": {
+    "name": "SignalPilot Labs",
+    "url": "https://github.com/SignalPilot-Labs"
+  },
+  "homepage": "https://signalpilot.ai",
+  "repository": "https://github.com/SignalPilot-Labs/signalpilot-chatgpt-work-plugin",
+  "license": "Apache-2.0",
+  "keywords": ["signalpilot", "analytics", "data", "mcp", "agent", "report"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "SignalPilot Agent",
+    "shortDescription": "Run governed data analyses through a SignalPilot agent.",
+    "longDescription": "SignalPilot runs an analysis agent in a cloud sandbox with governed access to your warehouse, dbt project, and knowledge base. This plugin teaches Codex to launch that agent, share the live chat link, watch progress, collect the report and saved files, and write a local report.",
+    "developerName": "SignalPilot Labs",
+    "category": "Data",
+    "capabilities": ["Database", "Automation", "Write"],
+    "websiteURL": "https://signalpilot.ai",
+    "brandColor": "#2563EB",
+    "defaultPrompt": [
+      "Run a SignalPilot agent for a simple chart of the past year of revenue and write a report.",
+      "Ask SignalPilot for the top 10 customers by revenue this quarter.",
+      "Have SignalPilot build a dashboard of monthly active users."
+    ]
+  }
+}
